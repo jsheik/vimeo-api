@@ -4,7 +4,7 @@ const axios = require('axios');
 var CircularJSON = require('circular-json');
 
 exports.uploadVideo = (req, callback) => {
-    let file_name = "/Users/10decoders/Documents/Vimeo/vimeo"
+    let file_name = "./vimeo"
     vimeoConfig.upload(
         file_name,
         {
@@ -66,7 +66,7 @@ function getResult(callback) {
 
     vimeoConfig.request({
         method: 'GET',
-        path: '/users/104738154/videos'
+        path: '/users/104797061/videos'
     }, (error, body, status_code, headers) => {
         if (error) {
             console.log(error);
@@ -101,21 +101,20 @@ function getApsoluteURL(data, callback) {
             var path = 'https://player.vimeo.com/video/' + item + '/config';
       axios.get(path)
                 .then(response => {
-                    console.log("ssss "+response.status);
+                    console.log("item "+item);
                     if(response.status==200){
                         if(response.data.request.files!=undefined){
                             resolve(response.data.request.files.progressive[0].url);
                         }else{
-                            resolve();
+                            resolve("https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
                         }
                     
                     }else{
-                        resolve();
+                        resolve("https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
                     }
                 })
                 .catch(error => {
-                    resolve();
-                    //console.log(error);
+                    resolve("https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
                 });
 
         }))

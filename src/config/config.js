@@ -1,5 +1,5 @@
 let Vimeo = require('vimeo').Vimeo;
-let client = new Vimeo("1073aaae68b19e5b0f97fd7f34ee6d5f06621983", "loHEBG8oEAAIlJR4uNrdA1W7fV+q+jB117+m1KKYJIl99iuF3k2agRSXyJzbDKm08itJ6RMdXdrKu216a0H842mg1e+fJ+tP2JgbwN4XK1XyoFmnhSI/ayZ/sRJ3pmkE", "224764c0b5027fd1e00638c686fdf249");
+let client = new Vimeo("f37ee6eb6d5f3576d5122b1571090aa7c7259772", "jsD++aRz4kaZbAFEyHMmhEfo6WDF6pdnUYJj4o8c9KBzV/3dc+OCr8OLzfYNuXyIpx61XZE4P5t4ojkZmGHfYprJdi6roikjTRraQUEBugjZoFqOaxO6iUtHA9fm7pxJ", "83b2824d49a5b39019daa67b93abfe6e");
 
 module.exports = client;
 
